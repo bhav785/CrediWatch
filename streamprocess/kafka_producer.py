@@ -9,7 +9,7 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
-with open('data/creditcard.csv', newline='') as csvfile:
+with open('/mnt/c/Users/bhav0/OneDrive/Documents/Projects/crediwatch/data/creditcard.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         for k in row:

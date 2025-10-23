@@ -75,5 +75,6 @@ evaluator = BinaryClassificationEvaluator(labelCol="Class", rawPredictionCol="ra
 auc = evaluator.evaluate(predictions)
 print(f"AUC: {auc:.4f}")
 
+model.write().overwrite().save("/mnt/c/Users/bhav0/OneDrive/Documents/Projects/crediwatch/models/logistic_model")
 # Stop Spark session
 spark.stop()
